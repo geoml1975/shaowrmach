@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شاورما دجاج: وصفة تفاعلية متقدمة</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6230858794160580" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #e53e3e;
+            --primary-light: #fc8181;
+            --secondary: #ed64a6;
+            --accent: #f6ad55;
+            --dark: #1e293b;
+            --light: #f8fafc;
+        }
+        
+        body {
+            font-family: 'Tajawal', 'Inter', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            transition: background-color 0.3s;
+            padding-bottom: 60px;
+        }
+        
+        .dark-mode {
+            background-color: #0f172a;
+            color: #e2e8f0;
+        }
+        
+        .dark-mode .card {
+            background-color: #1e293b;
+            color: #cbd5e1;
+        }
+        
+        .dark-mode th {
+            background-color: #334155;
+        }
+        
+        .dark-mode tbody tr:nth-child(even) {
+            background-color: #1e293b;
+        }
+        
+        .container {
+            max-width: 5xl;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        .section-title {
+            font-size: 1.875rem;
+            font-weight: bold;
+            color: #e53e3e;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .card {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        
+        .card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        table {
+            width: 100%;
+            font-size: 0.875rem;
+            text-align: right;
+            color: #334155;
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        
+        th, td {
+            padding: 0.75rem 1rem;
+            border: 1px solid #e2e8f0;
+        }
+        
+        thead th {
+            background-color: #f1f5f9;
+            color: #1e293b;
+            font-weight: 600;
+        }
+        
+        tbody tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+        
+        tbody tr:hover {
+            background-color: #fed7d7;
+        }
+        
+        input[type="number"] {
+            width: 6rem;
+            padding: 0.25rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 0.375rem;
+            text-align: center;
+            background-color: #f8fafc;
+        }
+        
+        input[type="number"]:focus {
+            outline: none;
+            border-color: #fc8181;
+            box-shadow: 0 0 0 3px rgba(252, 129, 129, 0.5);
+        }
+        
+        select {
+            padding: 0.25rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 0.375rem;
+            background-color: #f8fafc;
+        }
+        
+        select:focus {
+            outline: none;
+            border-color: #fc8181;
+            box-shadow: 0 0 0 3px rgba(252, 129, 129, 0.5);
+        }
+        
+        .rtl-text {
+            direction: rtl;
+            text-align: right;
+        }
+        
+        /* مكعبات النكهة */
+        .flavor-cube {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 90px;
+            height: 90px;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .flavor-cube:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .flavor-cube i {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        
+        /* التحكم بالصوت */
+        .audio-control {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: white;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+        
+        /* ساعة الطهي */
+        .cooking-timer {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            z-index: 1000;
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* التبديل بين الوضع الليلي */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        /* ألوان المكعبات */
+        .savory { background: linear-gradient(135deg, #f6ad55, #ed8936); color: white; }
+        .spicy { background: linear-gradient(135deg, #e53e3e, #c53030); color: white; }
+        .herbal { background: linear-gradient(135deg, #48bb78, #38a169); color: white; }
+        .sweet { background: linear-gradient(135deg, #9f7aea, #805ad5); color: white; }
+        .umami { background: linear-gradient(135deg, #718096, #4a5568); color: white; }
+        
+        /* الرسوم المتحركة */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        /* تقدم التحضير */
+        .progress-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: #e2e8f0;
+            z-index: 1000;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: #e53e3e;
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+        
+        /* الطبقات الثلاثية */
+        .layer-3d {
+            transform: perspective(1000px) rotateY(5deg);
+            transition: transform 0.5s;
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .layer-3d:hover {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+        
+        /* بطاقة الواقع المعزز */
+        .ar-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+        
+        .ar-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .ar-card:hover .ar-overlay {
+            opacity: 1;
+        }
+        
+        /* خطوات التحضير التفاعلية */
+        .step {
+            position: relative;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1.5rem;
+            background-color: #f9fafb;
+            border-left: 4px solid #e53e3e;
+        }
+        
+        .step-completed {
+            background-color: #f0fdf4;
+            border-left-color: #38a169;
+        }
+        
+        .step-btn {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: #fed7d7;
+            color: #e53e3e;
+            border-radius: 0.375rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .step-btn:hover {
+            background-color: #feb2b2;
+        }
+        
+        .step-completed .step-btn {
+            background-color: #c6f6d5;
+            color: #38a169;
+        }
+        
+        /* تتبع التغذية */
+        .nutrition-bar {
+            height: 8px;
+            background-color: #e2e8f0;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 0.25rem;
+        }
+        
+        .nutrition-fill {
+            height: 100%;
+            border-radius: 4px;
+        }
+        
+        .calories-fill { background-color: #f6ad55; }
+        .protein-fill { background-color: #48bb78; }
+        .carbs-fill { background-color: #9f7aea; }
+        
+        /* شهادة الإنجاز */
+        .certificate {
+            border: 2px solid #e53e3e;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            display: inline-block;
+            background: linear-gradient(to bottom right, #fff5f5, #fed7d7);
+        }
+        
+        /* الإشعارات */
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #38a169;
+            color: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            opacity: 0;
+            transform: translateY(100px);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+        
+        .notification.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* تنسيق الإعلان */
+        .ad-container {
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0;
+            background-color: #f8fafc;
+            padding: 1rem;
+            border-radius: 0.75rem;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .ad-content {
+            max-width: 728px;
+            width: 100%;
+            height: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f1f5f9;
+            border-radius: 0.5rem;
+            color: #64748b;
+            font-weight: bold;
+        }
+        
+        .ad-content ins {
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* أزرار المشاركة الجديدة */
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            margin: 0.25rem;
+        }
+        
+        .share-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .share-btn i {
+            margin-left: 0.5rem;
+        }
+        
+        .share-btn.whatsapp {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+        }
+        
+        .share-btn.twitter {
+            background: linear-gradient(135deg, #1DA1F2, #1A91DA);
+            color: white;
+        }
+        
+        .share-btn.instagram {
+            background: linear-gradient(135deg, #833AB4, #E1306C, #F77737);
+            color: white;
+        }
+        
+        .share-btn.certificate {
+            background: linear-gradient(135deg, #e53e3e, #c53030);
+            color: white;
+        }
+        
+        /* معاينة المشاركة */
+        .share-preview {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            display: none;
+        }
+        
+        .share-preview.active {
+            display: block;
+        }
+        
+        .share-preview h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #e53e3e;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .preview-content {
+            background: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid #e2e8f0;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .preview-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .preview-text {
+            font-size: 0.875rem;
+            line-height: 1.5;
+            color: #334155;
+        }
+        
+        .preview-url {
+            font-size: 0.75rem;
+            color: #64748b;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body class="rtl-text">
+
+    <!-- شريط التقدم -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- التحكم بالصوت -->
+    <div class="audio-control">
+        <i class="fas fa-volume-up" id="audioToggle"></i>
+    </div>
+
+    <!-- ساعة الطهي -->
+    <div class="cooking-timer card hidden" id="cookingTimer">
+        <h3 class="font-semibold mb-2">ساعة الطهي</h3>
+        <div class="text-2xl font-bold text-center" id="timerDisplay">00:00:00</div>
+        <div class="flex justify-center gap-2 mt-3">
+            <button class="px-3 py-1 bg-green-500 text-white rounded" id="startTimer">بدء</button>
+            <button class="px-3 py-1 bg-red-500 text-white rounded" id="stopTimer">إيقاف</button>
+            <button class="px-3 py-1 bg-gray-500 text-white rounded" id="resetTimer">إعادة</button>
+        </div>
+    </div>
+
+    <!-- تبديل الوضع الليلي -->
+    <div class="theme-toggle">
+        <button id="themeToggle" class="p-2 bg-red-600 text-white rounded-full">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <!-- الإعلان الأول في أعلى الصفحة -->
+    <div class="ad-container">
+        <div class="ad-content">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-6230858794160580"
+                 data-ad-slot="7773636471"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+
+    <div class="container">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl font-bold text-red-700 mb-2">شاورما دجاج: وصفة تفاعلية متقدمة</h1>
+            <h2 class="text-2xl font-semibold text-slate-600">Chicken Shawarma: An Advanced Interactive Recipe</h2>
+            <p class="text-lg text-slate-500 mt-4">
+                نقدم لكم وصفة شاورما الدجاج الشهية بتصميم متطور وديناميكي. يمكنكم الآن تعديل الكميات، استكشاف بدائل المكونات، وحساب التكاليف وهوامش الربح بشكل فوري لتخطيط وجباتكم ومشاريعكم الغذائية بكفاءة عالية.
+                <br>
+                Introducing the delicious Chicken Shawarma recipe with an advanced and dynamic design. You can now adjust quantities, explore ingredient alternatives, and instantly calculate costs and profit margins to plan your meals and food projects with high efficiency.
+            </p>
+        </header>
+
+        <!-- معدل النكهة التفاعلي -->
+        <section id="flavor-modifier" class="mb-10">
+            <h2 class="section-title">معدل النكهة التفاعلي | Interactive Flavor Modifier</h2>
+            <div class="card text-center">
+                <p class="mb-4">اختر شخصية الطبق الذي ترغب به من خلال تعديل مكعبات النكهة:</p>
+                <div class="flex flex-wrap justify-center">
+                    <div class="flavor-cube savory" data-flavor="savory">
+                        <i class="fas fa-cheese"></i>
+                        <div>مالحة</div>
+                        <div>Savory</div>
+                    </div>
+                    <div class="flavor-cube spicy" data-flavor="spicy">
+                        <i class="fas fa-pepper-hot"></i>
+                        <div>حارة</div>
+                        <div>Spicy</div>
+                    </div>
+                    <div class="flavor-cube herbal" data-flavor="herbal">
+                        <i class="fas fa-leaf"></i>
+                        <div>عشبية</div>
+                        <div>Herbal</div>
+                    </div>
+                    <div class="flavor-cube sweet" data-flavor="sweet">
+                        <i class="fas fa-candy-cane"></i>
+                        <div>حلوة</div>
+                        <div>Sweet</div>
+                    </div>
+                    <div class="flavor-cube umami" data-flavor="umami">
+                        <i class="fas fa-drumstick-bite"></i>
+                        <div>أومامي</div>
+                        <div>Umami</div>
+                    </div>
+                </div>
+                <div class="mt-4" id="flavorResult">
+                    <p>الطبق الحالي: <span class="font-semibold">متوازن</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- معاينة الطبق بالواقع المعزز -->
+        <section id="ar-preview" class="mb-10">
+            <h2 class="section-title">معاينة الطبق بالواقع المعزز | AR Dish Preview</h2>
+            <div class="card ar-card">
+                <div class="ar-overlay">
+                    <i class="fas fa-camera fa-3x mb-3"></i>
+                    <p>مسح رمز AR لعرض الطبق في بيئتك</p>
+                </div>
+                <img src="https://images.unsplash.com/photo-1603360946369-dc9bbd814503?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="شاورما دجاج" class="w-full h-64 object-cover">
+            </div>
+            <p class="text-center text-sm mt-2">ضع كاميرا هاتفك على الصورة لمعاينة الطبق بالواقع المعزز في مطبخك</p>
+        </section>
+
+        <section id="recipe-overview" class="mb-10">
+            <h2 class="section-title">نظرة عامة على الوصفة | Recipe Overview</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="card text-center">
+                    <h3 class="text-lg font-medium text-slate-500 mb-2">وقت التحضير</h3>
+                    <p class="text-2xl font-bold text-red-600">40 دقيقة</p>
+                    <p class="text-sm text-slate-500">Preparation Time</p>
+                </div>
+                <div class="card text-center">
+                    <h3 class="text-lg font-medium text-slate-500 mb-2">وقت التتبيل</h3>
+                    <p class="text-2xl font-bold text-red-600">8 ساعات</p>
+                    <p class="text-sm text-slate-500">Marinating Time</p>
+                </div>
+                <div class="card text-center">
+                    <h3 class="text-lg font-medium text-slate-500 mb-2">الكمية الأصلية</h3>
+                    <p class="text-2xl font-bold text-red-600">100 كيلو (200 حصة)</p>
+                    <p class="text-sm text-slate-500">100 kg (Serves 200 people)</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                <div class="card text-center">
+                    <h3 class="text-lg font-medium text-slate-500 mb-2">التكلفة لكل حصة (تقديري)</h3>
+                    <p class="text-2xl font-bold text-red-600" id="costPerServingDisplay">0.00 ريال</p>
+                    <p class="text-sm text-slate-500">Estimated Cost per Serving</p>
+                </div>
+                <div class="card text-center">
+                    <h3 class="text-lg font-medium text-slate-500 mb-2">سعر البيع المقترح للحصة</h3>
+                    <p class="text-2xl font-bold text-red-600" id="suggestedSellingPriceDisplay">0.00 ريال</p>
+                    <p class="text-sm text-slate-500">Suggested Selling Price per Serving</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- الإعلان الثاني في منتصف الصفحة -->
+        <div class="ad-container">
+            <div class="ad-content">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-6230858794160580"
+                     data-ad-slot="7773636471"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+
+        <section id="ingredients" class="mb-10">
+            <h2 class="section-title">المكونات | Ingredients</h2>
+            <div class="overflow-x-auto card">
+                <h3 class="text-xl font-semibold text-red-600 mb-3">1. مكونات الشاورما (لكل 100 كيلو):</h3>
+                <table id="ingredientsTableShawarma" class="mb-6">
+                    <thead>
+                        <tr>
+                            <th>م</th>
+                            <th>المكون<br>Ingredient</th>
+                            <th>الوحدة<br>Unit</th>
+                            <th>الكمية<br>Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>دجاج مخلي<br>Boneless Chicken</td><td>كجم (kg)</td><td>100</td></tr>
+                        <tr><td>2</td><td>عصير برتقال طازج<br>Fresh Orange Juice</td><td>كجم (kg)</td><td>4</td></tr>
+                        <tr><td>3</td><td>عصير ليمون<br>Lemon Juice</td><td>كجم (kg)</td><td>5</td></tr>
+                        <tr><td>4</td><td>بهارات شاورما<br>Shawarma Spices</td><td>كجم (kg)</td><td>1</td></tr>
+                        <tr><td>5</td><td>لبن زبادي<br>Yogurt</td><td>كجم (kg)</td><td>8</td></tr>
+                        <tr><td>6</td><td>خل أبيض<br>White Vinegar</td><td>لتر (L)</td><td>4</td></tr>
+                        <tr><td>7</td><td>ملح طعام<br>Salt</td><td>غرام (g)</td><td>1200</td></tr>
+                        <tr><td>8</td><td>خردل<br>Mustard</td><td>غرام (g)</td><td>500</td></tr>
+                        <tr><td>9</td><td>مسكة ناعمة<br>Fine Mastic Gum</td><td>غرام (g)</td><td>100</td></tr>
+                        <tr><td>10</td><td>زبدة بلوك<br>Butter Block</td><td>كجم (kg)</td><td>1</td></tr>
+                        <tr><td>11</td><td>زيت ذرة<br>Corn Oil</td><td>غرام (g)</td><td>100</td></tr>
+                    </tbody>
+                </table>
+
+                <h3 class="text-xl font-semibold text-red-600 mb-3 mt-6">2. مكونات بهارات الشاورما:</h3>
+                <table id="ingredientsTableSpices" class="mb-6">
+                    <thead>
+                        <tr>
+                            <th>م</th>
+                            <th>المكون<br>Ingredient</th>
+                            <th>الوحدة<br>Unit</th>
+                            <th>الكمية<br>Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>فلفل أبيض<br>White Pepper</td><td>غرام (g)</td><td>150</td></tr>
+                        <tr><td>2</td><td>مستكة<br>Mastic Gum</td><td>غرام (g)</td><td>50</td></tr>
+                        <tr><td>3</td><td>محلب<br>Mahleb</td><td>غرام (g)</td><td>100</td></tr>
+                        <tr><td>4</td><td>فلفل أسود<br>Black Pepper</td><td>غرام (g)</td><td>150</td></tr>
+                        <tr><td>5</td><td>كزبرة ناشفة<br>Dried Coriander</td><td>غرام (g)</td><td>100</td></tr>
+                        <tr><td>6</td><td>كمون ناعم<br>Ground Cumin</td><td>غرام (g)</td><td>100</td></tr>
+                        <tr><td>7</td><td>هيل<br>Cardamom</td><td>غرام (g)</td><td>50</td></tr>
+                        <tr><td>8</td><td>جوزة الطيب<br>Nutmeg</td><td>غرام (g)</td><td>50</td></tr>
+                        <tr><td>9</td><td>قرفة<br>Cinnamon</td><td>غرام (g)</td><td>100</td></tr>
+                        <tr><td>10</td><td>قرنفل مسمار<br>Cloves</td><td>غرام (g)</td><td>50</td></tr>
+                        <tr><td>11</td><td>فلفل أحمر<br>Red Pepper</td><td>غرام (g)</td><td>100</td></tr>
+                        <tr><td>12</td><td>ورق غار<br>Bay Leaves</td><td>غرام (g)</td><td>30</td></tr>
+                        <tr><td>13</td><td>زنجبيل<br>Ginger</td><td>غرام (g)</td><td>70</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- خطوات تحضير تفاعلية -->
+        <section id="preparation-steps" class="mb-10">
+            <h2 class="section-title">طريقة التحضير | Preparation Steps</h2>
+            <div class="space-y-4">
+                <div class="step" id="step1" data-step="1">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-xl font-semibold text-red-600">1. تحضير الدجاج | Preparing the Chicken:</h3>
+                        <button class="step-btn" id="stepBtn1"><i class="fas fa-check mr-1"></i> تم</button>
+                    </div>
+                    <p class="mt-2">يجهز الدجاج بعد تسيحته، نشرح الصدر منه لكي لا يكون هناك سماكة، يغسل جيداً ويوضع في مصفاة للتخلص من الماء الزائد.</p>
+                    <div class="mt-2 flex items-center">
+                        <i class="fas fa-clock text-red-600 mr-2"></i>
+                        <span>الوقت المطلوب: 20 دقيقة</span>
+                    </div>
+                </div>
+                
+                <div class="step" id="step2" data-step="2">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-xl font-semibold text-red-600">2. تحضير خليط التتبيل | Preparing the Marinade:</h3>
+                        <button class="step-btn" id="stepBtn2"><i class="fas fa-check mr-1"></i> تم</button>
+                    </div>
+                    <p class="mt-2">نقوم بوضع الزبدة والزيت في وعاء على نار هادئة ونضيف المسكة حتى تذوب تماماً. نخلط البهارات مع الزبادي جيداً ثم نضيف عصير الليمون والبرتقال، نضيف الملح والخل ونتأكد من اختلاط البهارات جيداً. نضيف قليلاً من الماء وأخيراً نضع الزبدة المضاف إليها المسكة ونحركها جيداً.</p>
+                    <div class="mt-2 flex items-center">
+                        <i class="fas fa-clock text-red-600 mr-2"></i>
+                        <span>الوقت المطلوب: 15 دقيقة</span>
+                    </div>
+                </div>
+                
+                <div class="step" id="step3" data-step="3">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-xl font-semibold text-red-600">3. تتبيل الدجاج | Marinating the Chicken:</h3>
+                        <button class="step-btn" id="stepBtn3"><i class="fas fa-check mr-1"></i> تم</button>
+                    </div>
+                    <p class="mt-2">نغمر الدجاج بخليط التتبيل ونحركه جيداً حتى يختلط مع الصلصة بشكل متجانس. يترك الدجاج في الثلاجة لمدة 8 ساعات على الأقل قبل الشوي.</p>
+                    <div class="mt-2 flex items-center">
+                        <i class="fas fa-clock text-red-600 mr-2"></i>
+                        <span>الوقت المطلوب: 8 ساعات (تبريد)</span>
+                    </div>
+                </div>
+                
+                <div class="step" id="step4" data-step="4">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-xl font-semibold text-red-600">4. الشوي والتقديم | Grilling and Serving:</h3>
+                        <button class="step-btn" id="stepBtn4"><i class="fas fa-check mr-1"></i> تم</button>
+                    </div>
+                    <p class="mt-2">نشوي الدجاج على الشواية أو في الفرن على حرارة 180 درجة مئوية لمدة 30-40 دقيقة حتى ينضج ويحمر. يقدم الشاورما ساخناً مع الخبز العربي والطحينة والخضروات الطازجة.</p>
+                    <div class="mt-2 flex items-center">
+                        <i class="fas fa-clock text-red-600 mr-2"></i>
+                        <span>الوقت المطلوب: 40 دقيقة</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="chef-tips" class="mb-10">
+            <h2 class="section-title">نصائح الشيف الخاصة | Special Chef Tips</h2>
+            <div class="card space-y-3 p-6 bg-red-50 border-r-4 border-red-600">
+                <p class="text-slate-700">**لشاورما طرية:** استخدمي أفخاذ الدجاج بدلاً من الصدر للحصول على قوام أكثر طراوة.</p>
+                <p class="text-slate-700">**نكهة مدخنة:** أضيفي رشة من البابريكا المدخنة أو مسحوق الفلفل المدخن للخليط للحصول على نكهة مميزة.</p>
+                <p class="text-slate-700">**قوام التتبيلة:** يمكنك إضافة ملعقة صغيرة من النشا للتتبيلة إذا كنت تفضلين قواماً أكثر كثافة.</p>
+                <p class="text-slate-700">**التبريد:** كلما زاد وقت التتبيل، كانت النكهة أعمق. يمكنك تتبيل الدجاج لمدة 24 ساعة للحصول على أفضل نتيجة.</p>
+                <p class="text-slate-700">**الشوي:** شوي الدجاج على الفحم يعطي نكهة مميزة لا تضاهى.</p>
+            </div>
+        </section>
+
+        <!-- الإعلان الثالث في أسفل الصفحة -->
+        <div class="ad-container">
+            <div class="ad-content">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-6230858794160580"
+                     data-ad-slot="7773636471"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+
+        <section id="nutritional-analysis" class="mb-10">
+            <h2 class="section-title">التحليل الغذائي | Nutritional Analysis</h2>
+            <p class="text-center text-slate-600 mb-4">
+                (تقريبي لكل حصة - بافتراض 200 حصة لكل 100 كيلو) | (Approximate per Serving - assuming 200 servings per 100 kg)
+            </p>
+            <div class="overflow-x-auto card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>المغذّي<br>Nutrient</th>
+                            <th>القيمة لكل حصة<br>Value per Serving</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>السعرات الحرارية<br>Calories</td><td>250 - 350 سعرة حرارية / kcal</td></tr>
+                        <tr><td>البروتين<br>Protein</td><td>25 - 30 غرام / g</td></tr>
+                        <tr><td>الدهون الكلية<br>Total Fat</td><td>10 - 15 غرام / g</td></tr>
+                        <tr><td>الدهون المشبعة<br>Saturated Fat</td><td>3 - 5 غرام / g</td></tr>
+                        <tr><td>الكربوهيدرات<br>Carbohydrates</td><td>15 - 20 غرام / g</td></tr>
+                        <tr><td>الألياف الغذائية<br>Dietary Fiber</td><td>1 - 3 غرام / g</td></tr>
+                        <tr><td>السكريات<br>Sugars</td><td>3 - 5 غرام / g</td></tr>
+                        <tr><td>الصوديوم<br>Sodium</td><td>600 - 800 ملغ / mg</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-center text-sm text-slate-500 mt-4">
+                **ملاحظة هامة:** هذه القيم تقديرية وتعتمد على دقة المكونات وطريقة التحضير. للحصول على تحليل دقيق، يفضل استخدام برامج تحليل غذائي متخصصة.
+            </p>
+        </section>
+
+        <!-- تتبع التغذية الشخصي -->
+        <section id="nutrition-tracker" class="mb-10">
+            <h2 class="section-title">تتبع التغذية الشخصي | Personalized Nutrition Tracker</h2>
+            <div class="card">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3">أهدافك الغذائية</h3>
+                        <div class="space-y-3">
+                            <div>
+                                <label class="block mb-1">السعرات الحرارية اليومية</label>
+                                <input type="number" class="w-full p-2 border rounded" id="dailyCalories" value="2000">
+                            </div>
+                            <div>
+                                <label class="block mb-1">البروتين (غرام)</label>
+                                <input type="number" class="w-full p-2 border rounded" id="dailyProtein" value="150">
+                            </div>
+                            <div>
+                                <label class="block mb-1">الكربوهيدرات (غرام)</label>
+                                <input type="number" class="w-full p-2 border rounded" id="dailyCarbs" value="250">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3">تأثير هذه الوجبة</h3>
+                        <div class="space-y-2">
+                            <div class="flex justify-between">
+                                <span>السعرات الحرارية:</span>
+                                <span><span id="caloriesImpact">300</span> سعرة (15%)</span>
+                            </div>
+                            <div class="nutrition-bar">
+                                <div class="nutrition-fill calories-fill" style="width: 15%"></div>
+                            </div>
+                            
+                            <div class="flex justify-between">
+                                <span>البروتين:</span>
+                                <span><span id="proteinImpact">28</span> غرام (19%)</span>
+                            </div>
+                            <div class="nutrition-bar">
+                                <div class="nutrition-fill protein-fill" style="width: 19%"></div>
+                            </div>
+                            
+                            <div class="flex justify-between">
+                                <span>الكربوهيدرات:</span>
+                                <span><span id="carbsImpact">18</span> غرام (7%)</span>
+                            </div>
+                            <div class="nutrition-bar">
+                                <div class="nutrition-fill carbs-fill" style="width: 7%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cost-analysis" class="mb-10">
+            <h2 class="section-title">تحليل التكلفة الحية | Live Cost Analysis</h2>
+            <p class="text-center text-slate-600 mb-4">
+                (لكل صنف ولكل 100 كيلو - نموذج عملي) | (Per Item & Per 100 kg - Practical Model)
+            </p>
+            <p class="text-center text-sm text-slate-500 mb-6">
+                الأسعار المذكورة أدناه هي تقديرية بناءً على متوسط أسعار السوق في الرياض.
+                **يمكنك تغيير هذه الأسعار في حقول الإدخال** لتعكس تكاليف الشراء الحالية لديك والحصول على حسابات دقيقة.
+            </p>
+            <div class="card p-6 mb-4">
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
+                    <label for="numServings" class="text-lg font-medium text-slate-700 whitespace-nowrap">
+                        عدد الأشخاص:
+                        <br>
+                        Number of Servings:
+                    </label>
+                    <input type="number" id="numServings" value="200" min="1" step="1" class="w-32 p-2 border border-slate-300 rounded-md text-center bg-slate-50 focus:border-red-500 focus:ring-red-500 text-xl font-bold">
+                </div>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
+                    <label for="profitMargin" class="text-lg font-medium text-slate-700 whitespace-nowrap">
+                        هامش الربح المطلوب (%): 
+                        <br>
+                        Desired Profit Margin (%):
+                    </label>
+                    <input type="number" id="profitMargin" value="30" min="0" step="1" class="w-32 p-2 border border-slate-300 rounded-md text-center bg-slate-50 focus:border-red-500 focus:ring-red-500 text-xl font-bold">
+                </div>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <label for="meatSubstitution" class="text-lg font-medium text-slate-700 whitespace-nowrap">
+                        نوع الدجاج:
+                        <br>
+                        Chicken Type:
+                    </label>
+                    <select id="meatSubstitution" class="p-2 border border-slate-300 rounded-md bg-slate-50 focus:border-red-500 focus:ring-red-500">
+                        <option value="fresh">دجاج طازج (الأصلي)</option>
+                        <option value="frozen">دجاج مجمد (تقديري: -20% تكلفة)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="overflow-x-auto card">
+                <table id="costAnalysisTable">
+                    <thead>
+                        <tr>
+                            <th>م</th>
+                            <th>المكون<br>Ingredient</th>
+                            <th>الكمية الأصلية<br>Original Quantity</th>
+                            <th>الكمية المعدلة<br>Adjusted Quantity</th>
+                            <th>سعر الوحدة التقريبي (ريال سعودي)<br>Approx. Unit Price (SAR)</th>
+                            <th>التكلفة لكل صنف (ريال سعودي)<br>Cost per Item (SAR)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows will be populated by JavaScript -->
+                    </tbody>
+                    <tfoot>
+                        <tr class="font-bold bg-slate-200">
+                            <td colspan="5" class="text-left">التكلفة الإجمالية للمكونات لكل 100 كيلو:<br>Total Ingredient Cost per 100 kg:</td>
+                            <td id="totalCost" class="text-center">0.00 ريال</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+        <section id="scientific-cost-solutions" class="mb-10">
+            <h2 class="section-title">حلول علمية لتقليل التكلفة | Scientific Solutions for Cost Reduction</h2>
+            <div class="card space-y-4 p-6 bg-blue-50 border-r-4 border-blue-600">
+                <p class="text-slate-700 text-lg font-semibold">
+                    لتحقيق أقصى قدر من الكفاءة والربحية، يتطلب تقليل التكلفة نهجاً منهجياً يعتمد على البيانات. إليك حلول علمية قابلة للتطبيق:
+                </p>
+                <ul class="list-disc list-inside space-y-2 text-slate-700">
+                    <li><span class="font-semibold">الشراء بالجملة:</span> شراء الدجاج والتوابل بكميات كبيرة من موردين موثوقين للحصول على أسعار أفضل.</li>
+                    <li><span class="font-semibold">استخدام بدائل:</span> استخدام الدجاج المجمد بدلاً من الطازج يمكن أن يخفض التكلفة بنسبة 20%.</li>
+                    <li><span class="font-semibold">تحسين كفاءة التبريد:</span> استخدام ثلاجات عالية الكفاءة لتقليل فاقد الطاقة أثناء التتبيل.</li>
+                    <li><span class="font-semibold">إدارة المخزون:</span> تطبيق نظام FIFO (أولاً يدخل أولاً يخرج) لتقليل الفاقد.</li>
+                    <li><span class="font-semibold">إعادة تدوير الزيوت:</span> استخدام زيوت القلي لمرات أكثر مع مراعاة جودة الغذاء.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- مشاركة الإنجاز -->
+        <section id="achievement-share" class="mb-10">
+            <h2 class="section-title">شارك إنجازك | Share Your Achievement</h2>
+            <div class="card text-center">
+                <p class="mb-4">هل انتهيت من تحضير الطبق؟ شارك صورك واحصل على شهادة إنجاز!</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#" id="shareInstagram" class="share-btn instagram">
+                        <i class="fab fa-instagram"></i> مشاركة على إنستغرام
+                    </a>
+                    <a href="#" id="shareWhatsApp" class="share-btn whatsapp">
+                        <i class="fab fa-whatsapp"></i> مشاركة على واتساب
+                    </a>
+                    <a href="#" id="shareTwitter" class="share-btn twitter">
+                        <i class="fab fa-twitter"></i> مشاركة على تويتر
+                    </a>
+                    <button class="share-btn certificate" id="getCertificateBtn">
+                        <i class="fas fa-award"></i> الحصول على شهادة
+                    </button>
+                </div>
+                
+                <!-- معاينة المشاركة -->
+                <div class="share-preview" id="sharePreview">
+                    <h3>معاينة المشاركة</h3>
+                    <div class="preview-content">
+                        <div class="preview-image" id="previewImage"></div>
+                        <div class="preview-text" id="previewText"></div>
+                        <div class="preview-url" id="previewUrl"></div>
+                    </div>
+                </div>
+                
+                <div class="mt-6 hidden" id="certificatePreview">
+                    <div class="certificate">
+                        <h3 class="text-2xl font-bold text-red-700 text-center">شهادة إنجاز</h3>
+                        <p class="my-3 text-center">تم منح هذه الشهادة تقديراً لتحضير طبق شاورما الدجاج المميز</p>
+                        <div class="flex justify-center my-4">
+                            <i class="fas fa-medal text-yellow-500 text-4xl"></i>
+                        </div>
+                        <p class="text-center">تاريخ: <span id="certificateDate"></span></p>
+                        <p class="text-center mt-4">بتوقيع: <span class="font-bold">خبير شاورما</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="serving-suggestions" class="mb-10">
+            <h2 class="section-title">اقتراحات التقديم | Serving Suggestions</h2>
+            <div class="card text-center text-lg text-slate-700">
+                <p>يُقدم طبق شاورما الدجاج ساخناً، ويُعتبر مثالياً مع:</p>
+                <ul class="list-disc list-inside mx-auto w-fit mt-2">
+                    <li>الخبز العربي أو خبز البيتا الطازج</li>
+                    <li>صلصة الطحينة أو الحمص</li>
+                    <li>خضروات طازجة (خس، طماطم، خيار)</li>
+                    <li>مخللات متنوعة</li>
+                    <li>بطاطس مقلية</li>
+                </ul>
+                <p class="mt-4">Serve Chicken Shawarma hot. It pairs perfectly with:</p>
+                <ul class="list-disc list-inside mx-auto w-fit mt-2">
+                    <li>Fresh Arabic bread or pita bread</li>
+                    <li>Tahini sauce or hummus</li>
+                    <li>Fresh vegetables (lettuce, tomatoes, cucumbers)</li>
+                    <li>Assorted pickles</li>
+                    <li>French fries</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer class="mt-12 text-center text-sm text-slate-500">
+            <p>&copy; <span id="currentYear"></span> جميع الحقوق محفوظة. تم التصميم بواسطة خبير شاورما.</p>
+            <p>&copy; <span id="currentYearEnglish"></span> All rights reserved. Designed by Shawarma Expert.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // تبديل الوضع الليلي
+            const themeToggle = document.getElementById('themeToggle');
+            themeToggle.addEventListener('click', function() {
+                document.body.classList.toggle('dark-mode');
+                const icon = themeToggle.querySelector('i');
+                if (document.body.classList.contains('dark-mode')) {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                } else {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                }
+            });
+            
+            // التحكم بالصوت
+            const audioToggle = document.getElementById('audioToggle');
+            audioToggle.addEventListener('click', function() {
+                this.classList.toggle('fa-volume-up');
+                this.classList.toggle('fa-volume-mute');
+                // تشغيل أو إيقاف صوت الطهي
+                const audio = document.getElementById('cookingAudio');
+                if (audio) {
+                    if (audio.paused) {
+                        audio.play();
+                    } else {
+                        audio.pause();
+                    }
+                }
+            });
+            
+            // مكعبات النكهة
+            const flavorCubes = document.querySelectorAll('.flavor-cube');
+            const flavorResult = document.getElementById('flavorResult');
+            
+            flavorCubes.forEach(cube => {
+                cube.addEventListener('click', function() {
+                    const flavor = this.getAttribute('data-flavor');
+                    let flavorName, description;
+                    
+                    switch(flavor) {
+                        case 'savory':
+                            flavorName = "مالحة غنية";
+                            description = "زيادة كمية الملح والبهارات بنسبة 15%";
+                            break;
+                        case 'spicy':
+                            flavorName = "حارة ومميزة";
+                            description = "زيادة الفلفل الحار والبهارات الحارة بنسبة 20%";
+                            break;
+                        case 'herbal':
+                            flavorName = "عشبية منعشة";
+                            description = "زيادة الأعشاب الطازجة مثل النعناع والكزبرة بنسبة 25%";
+                            break;
+                        case 'sweet':
+                            flavorName = "حلوة متوازنة";
+                            description = "إضافة ملعقة صغيرة من السكر إلى التتبيلة";
+                            break;
+                        case 'umami':
+                            flavorName = "أومامي عميقة";
+                            description = "إضافة صلصة الصويا أو مسحوق الفطر";
+                            break;
+                        default:
+                            flavorName = "متوازنة";
+                            description = "النكهة الأصلية للوصفة";
+                    }
+                    
+                    flavorResult.innerHTML = `
+                        <p class="font-semibold">الطبق الحالي: ${flavorName}</p>
+                        <p class="text-sm mt-1">${description}</p>
+                    `;
+                    
+                    // إضافة تأثير النبض للمكعب المختار
+                    flavorCubes.forEach(c => c.classList.remove('pulse'));
+                    this.classList.add('pulse');
+                });
+            });
+            
+            // تتبع التقدم
+            const progressBar = document.getElementById('progressBar');
+            const sections = document.querySelectorAll('section');
+            let currentSection = 0;
+            
+            function updateProgress() {
+                const scrollPosition = window.scrollY;
+                let currentIndex = 0;
+                
+                sections.forEach((section, index) => {
+                    const sectionTop = section.offsetTop - 100;
+                    if (scrollPosition >= sectionTop) {
+                        currentIndex = index;
+                    }
+                });
+                
+                const progress = ((currentIndex + 1) / sections.length) * 100;
+                progressBar.style.width = `${progress}%`;
+                
+                if (currentIndex !== currentSection) {
+                    currentSection = currentIndex;
+                    // إظهار ساعة الطهي عند الوصول لمرحلة التحضير
+                    if (sections[currentSection].id === 'preparation-steps') {
+                        document.getElementById('cookingTimer').classList.remove('hidden');
+                    }
+                }
+            }
+            
+            window.addEventListener('scroll', updateProgress);
+            window.addEventListener('resize', updateProgress);
+            updateProgress();
+            
+            // ساعة الطهي
+            const timerDisplay = document.getElementById('timerDisplay');
+            const startTimerBtn = document.getElementById('startTimer');
+            const stopTimerBtn = document.getElementById('stopTimer');
+            const resetTimerBtn = document.getElementById('resetTimer');
+            
+            let timerInterval;
+            let seconds = 0;
+            let isRunning = false;
+            
+            function updateTimerDisplay() {
+                const hrs = Math.floor(seconds / 3600);
+                const mins = Math.floor((seconds % 3600) / 60);
+                const secs = seconds % 60;
+                
+                timerDisplay.textContent = 
+                    `${hrs.toString().padStart(2, '0')}:${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+            }
+            
+            startTimerBtn.addEventListener('click', function() {
+                if (!isRunning) {
+                    isRunning = true;
+                    timerInterval = setInterval(function() {
+                        seconds++;
+                        updateTimerDisplay();
+                    }, 1000);
+                }
+            });
+            
+            stopTimerBtn.addEventListener('click', function() {
+                if (isRunning) {
+                    isRunning = false;
+                    clearInterval(timerInterval);
+                }
+            });
+            
+            resetTimerBtn.addEventListener('click', function() {
+                isRunning = false;
+                clearInterval(timerInterval);
+                seconds = 0;
+                updateTimerDisplay();
+            });
+            
+            // خطوات التحضير
+            const stepButtons = document.querySelectorAll('.step-btn');
+            stepButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const step = this.closest('.step');
+                    step.classList.add('step-completed');
+                    
+                    // إشعار بإكمال الخطوة
+                    showNotification('تم إكمال الخطوة بنجاح!');
+                });
+            });
+            
+            // شهادة الإنجاز
+            const certificateBtn = document.getElementById('getCertificateBtn');
+            const certificatePreview = document.getElementById('certificatePreview');
+            certificateBtn.addEventListener('click', function() {
+                const now = new Date();
+                const dateStr = now.toLocaleDateString('ar-SA', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+                
+                document.getElementById('certificateDate').textContent = dateStr;
+                certificatePreview.classList.remove('hidden');
+                showNotification('تهانينا! تم إنشاء شهادة إنجازك');
+            });
+            
+            // وظيفة الإشعارات
+            function showNotification(message) {
+                const notification = document.getElementById('notification');
+                const notificationText = document.getElementById('notificationText');
+                
+                notificationText.textContent = message;
+                notification.classList.add('show');
+                
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                }, 3000);
+            }
+            
+            // تحليل التكلفة
+            const originalServings = 200; // 100 kg serves 200 people
+            let currentServings = originalServings;
+
+            const ingredientsData = [
+                { id: 'chicken', name: { ar: "دجاج مخلي", en: "Boneless Chicken" }, originalQuantity: 100, unit: { ar: "كجم", en: "kg" }, estimatedPrice: 12.00 },
+                { id: 'orangeJuice', name: { ar: "عصير برتقال طازج", en: "Fresh Orange Juice" }, originalQuantity: 4, unit: { ar: "كجم", en: "kg" }, estimatedPrice: 8.00 },
+                { id: 'lemonJuice', name: { ar: "عصير ليمون", en: "Lemon Juice" }, originalQuantity: 5, unit: { ar: "كجم", en: "kg" }, estimatedPrice: 10.00 },
+                { id: 'spices', name: { ar: "بهارات شاورما", en: "Shawarma Spices" }, originalQuantity: 1, unit: { ar: "كجم", en: "kg" }, estimatedPrice: 50.00 },
+                { id: 'yogurt', name: { ar: "لبن زبادي", en: "Yogurt" }, originalQuantity: 8, unit: { ar: "كجم", en: "kg" }, estimatedPrice: 3.50 },
+                { id: 'vinegar', name: { ar: "خل أبيض", en: "White Vinegar" }, originalQuantity: 4, unit: { ar: "لتر", en: "L" }, estimatedPrice: 5.00 },
+                { id: 'salt', name: { ar: "ملح طعام", en: "Salt" }, originalQuantity: 1200, unit: { ar: "غرام", en: "g" }, estimatedPrice: 0.002 },
+                { id: 'mustard', name: { ar: "خردل", en: "Mustard" }, originalQuantity: 500, unit: { ar: "غرام", en: "g" }, estimatedPrice: 0.05 },
+                { id: 'masticGum', name: { ar: "مسكة ناعمة", en: "Fine Mastic Gum" }, originalQuantity: 100, unit: { ar: "غرام", en: "g" }, estimatedPrice: 0.30 },
+                { id: 'butter', name: { ar: "زبدة بلوك", en: "Butter Block" }, originalQuantity: 1, unit: { ar: "كجم", en: "kg" }, estimatedPrice: 25.00 },
+                { id: 'cornOil', name: { ar: "زيت ذرة", en: "Corn Oil" }, originalQuantity: 100, unit: { ar: "غرام", en: "g" }, estimatedPrice: 0.03 }
+            ];
+
+            const costAnalysisTableBody = document.getElementById('costAnalysisTable').getElementsByTagName('tbody')[0];
+            const totalCostElement = document.getElementById('totalCost');
+            const numServingsInput = document.getElementById('numServings');
+            const profitMarginInput = document.getElementById('profitMargin');
+            const meatSubstitutionSelect = document.getElementById('meatSubstitution');
+            const costPerServingDisplay = document.getElementById('costPerServingDisplay');
+            const suggestedSellingPriceDisplay = document.getElementById('suggestedSellingPriceDisplay');
+
+            function calculateTotalCost() {
+                let total = 0;
+                const rows = costAnalysisTableBody.rows;
+                const multiplier = currentServings / originalServings;
+
+                ingredientsData.forEach((item, index) => {
+                    const row = rows[index];
+                    const adjustedQuantity = item.originalQuantity * multiplier;
+                    row.cells[3].innerHTML = `${adjustedQuantity.toFixed(2)} ${item.unit.ar}<br>${adjustedQuantity.toFixed(2)} ${item.unit.en}`;
+
+                    const unitPriceInput = row.cells[4].querySelector('input');
+                    let currentEstimatedPrice = item.estimatedPrice;
+
+                    // Apply substitution price for chicken
+                    if (item.id === 'chicken') {
+                        if (meatSubstitutionSelect.value === 'frozen') {
+                            currentEstimatedPrice = item.estimatedPrice * 0.80; // Frozen is 20% cheaper
+                        }
+                        unitPriceInput.value = currentEstimatedPrice.toFixed(2);
+                    }
+                    
+                    let unitPrice = parseFloat(unitPriceInput.value);
+                    if (isNaN(unitPrice)) unitPrice = 0;
+
+                    const costPerItem = adjustedQuantity * unitPrice;
+                    row.cells[5].textContent = costPerItem.toFixed(2) + ' ريال';
+                    total += costPerItem;
+                });
+
+                totalCostElement.textContent = total.toFixed(2) + ' ريال';
+
+                const costPerServing = (currentServings > 0) ? (total / currentServings) : 0;
+                costPerServingDisplay.textContent = `${costPerServing.toFixed(2)} ريال`;
+
+                const profitMargin = parseFloat(profitMarginInput.value) / 100;
+                let suggestedSellingPrice = 0;
+                if (profitMargin >= 0 && profitMargin < 1 && costPerServing > 0) {
+                    suggestedSellingPrice = costPerServing / (1 - profitMargin);
+                } else if (costPerServing > 0) {
+                    suggestedSellingPrice = costPerServing;
+                }
+                suggestedSellingPriceDisplay.textContent = `${suggestedSellingPrice.toFixed(2)} ريال`;
+            }
+
+            // Populate the cost analysis table
+            ingredientsData.forEach((item, index) => {
+                let row = costAnalysisTableBody.insertRow();
+                row.insertCell().textContent = index + 1;
+                row.insertCell().innerHTML = `${item.name.ar}<br>${item.name.en}`;
+                row.insertCell().innerHTML = `${item.originalQuantity} ${item.unit.ar}<br>${item.originalQuantity} ${item.unit.en}`;
+                
+                let adjustedQuantityCell = row.insertCell();
+                adjustedQuantityCell.innerHTML = `${item.originalQuantity.toFixed(2)} ${item.unit.ar}<br>${item.originalQuantity.toFixed(2)} ${item.unit.en}`;
+                
+                let priceCell = row.insertCell();
+                let priceInput = document.createElement('input');
+                priceInput.type = 'number';
+                
+                let precision = 2;
+                if (item.unit.en === 'g' || item.unit.en === 'kg') {
+                    precision = 2;
+                }
+                priceInput.value = item.estimatedPrice.toFixed(precision);
+                priceInput.step = '0.01';
+                priceInput.classList.add('text-center');
+                priceInput.oninput = calculateTotalCost;
+                priceCell.appendChild(priceInput);
+
+                let costPerItemCell = row.insertCell();
+                costPerItemCell.textContent = '0.00 ريال'; 
+            });
+
+            // Event listeners
+            numServingsInput.addEventListener('input', (event) => {
+                currentServings = parseFloat(event.target.value);
+                if (isNaN(currentServings) || currentServings < 1) {
+                    currentServings = 1;
+                    numServingsInput.value = 1;
+                }
+                calculateTotalCost();
+            });
+
+            profitMarginInput.addEventListener('input', calculateTotalCost);
+            meatSubstitutionSelect.addEventListener('change', calculateTotalCost);
+
+            // Initial calculation on page load
+            calculateTotalCost();
+
+            // Set current year in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            document.getElementById('currentYearEnglish').textContent = new Date().getFullYear();
+            
+            // مشاركة على وسائل التواصل الاجتماعي
+            const shareWhatsApp = document.getElementById('shareWhatsApp');
+            const shareTwitter = document.getElementById('shareTwitter');
+            const shareInstagram = document.getElementById('shareInstagram');
+            const sharePreview = document.getElementById('sharePreview');
+            const previewImage = document.getElementById('previewImage');
+            const previewText = document.getElementById('previewText');
+            const previewUrl = document.getElementById('previewUrl');
+            
+            // نص المشاركة الأساسي
+            const shareMessage = "جربت وصفة شاورما الدجاج التفاعلية المتقدمة! يمكنك تعديل الكميات، استكشاف بدائل المكونات، وحساب التكاليف وهوامش الربح بشكل فوري. #وصفات_طبخ #مطبخ_شرقي #شاورما_دجاج";
+            const shareUrl = window.location.href;
+            const shareImageUrl = "https://images.unsplash.com/photo-1603360946369-dc9bbd814503?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80";
+            
+            // وظيفة إنشاء رابط المشاركة
+            function createShareUrl(platform) {
+                const encodedMessage = encodeURIComponent(shareMessage);
+                const encodedUrl = encodeURIComponent(shareUrl);
+                
+                switch(platform) {
+                    case 'whatsapp':
+                        return `https://wa.me/?text=${encodedMessage}%0A%0A${encodedUrl}`;
+                    case 'twitter':
+                        return `https://twitter.com/intent/tweet?text=${encodedMessage}&url=${encodedUrl}`;
+                    case 'instagram':
+                        return 'instagram://app';
+                    default:
+                        return '#';
+                }
+            }
+            
+            // وظيفة معاينة المشاركة
+            function showSharePreview(platform) {
+                previewImage.style.backgroundImage = `url('${shareImageUrl}')`;
+                previewText.textContent = shareMessage;
+                previewUrl.textContent = shareUrl;
+                
+                sharePreview.classList.add('active');
+            }
+            
+            // إضافة معالجات الأحداث لأزرار المشاركة
+            shareWhatsApp.addEventListener('click', function(e) {
+                e.preventDefault();
+                showSharePreview('whatsapp');
+                setTimeout(() => {
+                    window.open(createShareUrl('whatsapp'), '_blank');
+                }, 1000);
+            });
+            
+            shareTwitter.addEventListener('click', function(e) {
+                e.preventDefault();
+                showSharePreview('twitter');
+                setTimeout(() => {
+                    window.open(createShareUrl('twitter'), '_blank');
+                }, 1000);
+            });
+            
+            shareInstagram.addEventListener('click', function(e) {
+                e.preventDefault();
+                showSharePreview('instagram');
+                setTimeout(() => {
+                    window.open(createShareUrl('instagram'), '_blank');
+                    showNotification('برجاء مشاركة الصورة يدوياً على إنستغرام');
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>
